@@ -1,0 +1,26 @@
+{
+  "name": "rucher-de-la-graviere",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev --port 3003",
+    "build": "astro build",
+    "preview": "astro preview --port 3003",
+    "start": "node dist/server/entry.mjs"
+  },
+  "dependencies": {
+    "@astrojs/node": "^9.1.3",
+    "@astrojs/sitemap": "^3.3.1",
+    "@fontsource-variable/inter": "^5.1.1",
+    "@fontsource-variable/playfair-display": "^5.1.1",
+    "astro": "^5.7.10",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3"
+  }
+}

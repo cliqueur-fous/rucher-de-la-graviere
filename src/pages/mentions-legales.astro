@@ -1,0 +1,75 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SITE_CONFIG } from '@/lib/constants';
+---
+
+<BaseLayout title="Mentions légales" description="Mentions légales du site Le Rucher de la Gravière">
+  <div class="mx-auto max-w-3xl px-4 py-32">
+    <h1 class="font-serif text-4xl font-bold text-foreground">Mentions légales</h1>
+
+    <div class="mt-12 space-y-10 text-sm text-muted leading-relaxed">
+      <section>
+        <h2 class="mb-3 text-lg font-semibold text-foreground">Éditeur du site</h2>
+        <p>
+          {SITE_CONFIG.name}<br />
+          {SITE_CONFIG.address}<br />
+          {SITE_CONFIG.city}<br />
+          Tél : {SITE_CONFIG.phone}
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-3 text-lg font-semibold text-foreground">Hébergement</h2>
+        <p>
+          Netcup GmbH<br />
+          Daimlerstraße 25, 76185 Karlsruhe, Allemagne<br />
+          <a href="https://www.netcup.eu" class="text-primary hover:underline" target="_blank" rel="noopener">
+            www.netcup.eu
+          </a>
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-3 text-lg font-semibold text-foreground">Propriété intellectuelle</h2>
+        <p>
+          L'ensemble du contenu de ce site (textes, images, photographies) est la propriété
+          exclusive de {SITE_CONFIG.name}, sauf mention contraire. Toute reproduction,
+          représentation ou diffusion, en tout ou partie, du contenu de ce site est interdite
+          sans l'autorisation préalable de l'éditeur.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-3 text-lg font-semibold text-foreground">Données personnelles</h2>
+        <p>
+          Ce site ne collecte aucune donnée personnelle. Aucun cookie n'est déposé.
+          Aucun outil de suivi ou d'analyse n'est utilisé.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-3 text-lg font-semibold text-foreground">Responsabilité</h2>
+        <p>
+          Les informations présentes sur ce site sont fournies à titre indicatif.
+          L'éditeur ne saurait être tenu responsable d'éventuelles erreurs ou omissions.
+          Les prix et disponibilités des produits sont susceptibles d'évoluer.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-3 text-lg font-semibold text-foreground">Contact</h2>
+        <p>
+          Pour toute question, contactez-nous par téléphone au
+          <a href={`tel:${SITE_CONFIG.phone.replace(/\s/g, '')}`} class="text-primary hover:underline">
+            {SITE_CONFIG.phone}
+          </a>
+          ou rendez-vous directement au {SITE_CONFIG.address}, {SITE_CONFIG.city}.
+        </p>
+      </section>
+    </div>
+
+    <div class="mt-12">
+      <a href="/" class="text-sm text-primary hover:underline">← Retour à l'accueil</a>
+    </div>
+  </div>
+</BaseLayout>

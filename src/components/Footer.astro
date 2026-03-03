@@ -1,0 +1,41 @@
+---
+import { SITE_CONFIG } from '@/lib/constants';
+---
+
+<footer class="border-t border-border bg-secondary py-12">
+  <div class="mx-auto max-w-6xl px-4">
+    <div class="grid gap-8 md:grid-cols-3">
+      <!-- Brand -->
+      <div>
+        <p class="font-serif text-lg font-bold text-foreground">{SITE_CONFIG.name}</p>
+        <p class="mt-2 text-sm text-muted">{SITE_CONFIG.tagline}</p>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <p class="text-sm font-semibold text-foreground">Contact</p>
+        <p class="mt-2 text-sm text-muted">
+          <a href={`tel:${SITE_CONFIG.phone.replace(/\s/g, '')}`} class="hover:text-primary">
+            {SITE_CONFIG.phone}
+          </a>
+        </p>
+        <p class="mt-1 text-sm text-muted">
+          {SITE_CONFIG.address}<br />
+          {SITE_CONFIG.city}
+        </p>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <p class="text-sm font-semibold text-foreground">Informations</p>
+        <a href="/mentions-legales" class="mt-2 block text-sm text-muted hover:text-primary">
+          Mentions légales
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-8 border-t border-border pt-6 text-center text-xs text-muted">
+      © {new Date().getFullYear()} {SITE_CONFIG.name} — {SITE_CONFIG.address}, {SITE_CONFIG.city}
+    </div>
+  </div>
+</footer>
