@@ -11,10 +11,10 @@ export const SITE_CONFIG = {
 } as const;
 
 export const NAV_LINKS = [
-  { href: '#histoire', label: 'Notre histoire' },
-  { href: '#produits', label: 'Nos produits' },
-  { href: '#galerie', label: 'Galerie' },
-  { href: '#trouver', label: 'Nous trouver' },
+  { href: '/#histoire', label: 'Notre histoire' },
+  { href: '/#produits', label: 'Nos produits' },
+  { href: '/#galerie', label: 'Galerie' },
+  { href: '/#trouver', label: 'Nous trouver' },
 ] as const;
 
 export interface Product {
