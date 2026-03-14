@@ -121,6 +121,6 @@ export const MARKETS: Market[] = [
   {
     name: 'Marché de Condé-en-Brie',
     schedule: '2e dimanche du mois, d\'avril à octobre',
-    location: 'Espace de Sade, Condé-en-Brie',
+    location: 'Place de l\'église, Condé-en-Brie',
   },
 ];
