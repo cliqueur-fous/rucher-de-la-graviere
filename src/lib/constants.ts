@@ -20,6 +20,7 @@ export const NAV_LINKS = [
 export interface Product {
   name: string;
   description: string;
+  composition?: string;
   image: string;
   prices: { size: string; price: string }[];
   category: 'miel' | 'gourmandise';
@@ -29,7 +30,7 @@ export const PRODUCTS: Product[] = [
   {
     name: 'Miel de tournesols',
     description:
-      'Onctueux et parfumé, ce miel est récolté en été dans les champs de tournesols de l\'Aisne. Idéal pour les tartines.',
+      'Onctueux et parfume, ce miel est recolte en ete dans les champs de tournesols de l\'Aisne. Ideal pour les tartines.',
     image: '/images/pot-miel.jpg',
     prices: [
       { size: '500g', price: '7,00 €' },
@@ -40,7 +41,7 @@ export const PRODUCTS: Product[] = [
   {
     name: 'Miel de fleurs',
     description:
-      'Un miel toutes fleurs qui capture la diversité du terroir picard. Chaque récolte est unique, au gré des floraisons.',
+      'Un miel toutes fleurs qui capture la diversite du terroir picard. Chaque recolte est unique, au gre des floraisons.',
     image: '/images/pot-miel.jpg',
     prices: [
       { size: '500g', price: '7,00 €' },
@@ -50,32 +51,32 @@ export const PRODUCTS: Product[] = [
   },
   {
     name: 'Pain d\'épices nature',
-    description:
-      'Moelleux et parfumé. Farine 34%, miel 33%, lait 33%, épices.',
+    description: 'Moelleux et parfumé, préparé avec notre propre miel.',
+    composition: 'Farine 34%, miel 33%, lait 33%, épices',
     image: '/images/nougatine.jpg',
     prices: [{ size: '1 pièce', price: '4,00 €' }],
     category: 'gourmandise',
   },
   {
     name: 'Pain d\'épices orange',
-    description:
-      'Pain d\'épices moelleux aux écorces d\'orange confites. Farine 26%, miel 26%, lait 26%, écorce d\'orange confite 22%, épices.',
+    description: 'Pain d\'épices moelleux, sublimé par des écorces d\'orange confites.',
+    composition: 'Farine 26%, miel 26%, lait 26%, écorce d\'orange confite 22%, épices',
     image: '/images/nougatine.jpg',
     prices: [{ size: '1 pièce', price: '4,50 €' }],
     category: 'gourmandise',
   },
   {
     name: 'Nougat au miel',
-    description:
-      'Nougat tendre fait maison. Sucre 40%, miel 25%, amandes 19%, noisettes 7%, pistaches 7%, blanc d\'œuf 2%. Poids net 120g.',
+    description: 'Nougat tendre fait maison avec notre miel, des amandes, noisettes et pistaches.',
+    composition: 'Sucre 40%, miel 25%, amandes 19%, noisettes 7%, pistaches 7%, blanc d\'œuf 2% — poids net 120g',
     image: '/images/nougatine.jpg',
     prices: [{ size: '120g', price: '4,00 €' }],
     category: 'gourmandise',
   },
   {
     name: 'Nougatine',
-    description:
-      'Croquante et dorée, notre nougatine fond en bouche. Sucre 46%, amandes 38%, miel 25%, beurre 1%. Poids net 150g.',
+    description: 'Croquante et dorée, notre nougatine aux amandes et au miel fond en bouche.',
+    composition: 'Sucre 46%, amandes 38%, miel 25%, beurre 1% — poids net 150g',
     image: '/images/nougatine.jpg',
     prices: [{ size: '150g', price: '4,50 €' }],
     category: 'gourmandise',

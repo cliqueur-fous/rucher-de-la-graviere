@@ -35,6 +35,11 @@ import { PRODUCTS } from '@/lib/constants';
               </span>
             </div>
             <p class="mt-2 text-sm text-muted">{product.description}</p>
+            {product.composition && (
+              <p class="mt-2 rounded-lg bg-secondary/50 px-3 py-2 text-xs text-muted/80">
+                <span class="font-semibold text-muted">Composition :</span> {product.composition}
+              </p>
+            )}
             <div class="mt-4 flex flex-wrap gap-2">
               {product.prices.map((p) => (
                 <span class="rounded-lg bg-secondary px-3 py-1.5 text-sm font-semibold text-foreground">
