@@ -69,7 +69,7 @@ export const PRODUCTS: Product[] = [
     description:
       'Nougat tendre fait maison avec notre miel et des amandes. Un classique revisité avec les produits du rucher.',
     image: '/images/nougatine.jpg',
-    prices: [{ size: '150g', price: '4,50 €' }],
+    prices: [{ size: '120g', price: '4,00 €' }],
     category: 'gourmandise',
   },
   {
