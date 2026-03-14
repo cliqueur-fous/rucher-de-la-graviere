@@ -75,7 +75,7 @@ export const PRODUCTS: Product[] = [
   {
     name: 'Nougatine',
     description:
-      'Croquante et dorée, notre nougatine aux amandes et au miel fond en bouche.',
+      'Croquante et dorée, notre nougatine fond en bouche. Sucre 46%, amandes 38%, miel 25%, beurre 1%. Poids net 150g.',
     image: '/images/nougatine.jpg',
     prices: [{ size: '150g', price: '4,50 €' }],
     category: 'gourmandise',
