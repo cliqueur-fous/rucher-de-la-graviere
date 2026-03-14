@@ -51,7 +51,7 @@ export const PRODUCTS: Product[] = [
   {
     name: 'Pain d\'épices nature',
     description:
-      'Moelleux et parfumé, notre pain d\'épices est préparé avec notre propre miel. Une recette traditionnelle.',
+      'Moelleux et parfumé. Farine 34%, miel 33%, lait 33%, épices.',
     image: '/images/nougatine.jpg',
     prices: [{ size: '1 pièce', price: '4,00 €' }],
     category: 'gourmandise',
@@ -67,7 +67,7 @@ export const PRODUCTS: Product[] = [
   {
     name: 'Nougat au miel',
     description:
-      'Nougat tendre fait maison avec notre miel et des amandes. Un classique revisité avec les produits du rucher.',
+      'Nougat tendre fait maison. Sucre 40%, miel 25%, amandes 19%, noisettes 7%, pistaches 7%, blanc d\'œuf 2%. Poids net 120g.',
     image: '/images/nougatine.jpg',
     prices: [{ size: '120g', price: '4,00 €' }],
     category: 'gourmandise',
@@ -75,9 +75,9 @@ export const PRODUCTS: Product[] = [
   {
     name: 'Nougatine',
     description:
-      'Croquante et dorée, notre nougatine aux amandes et au miel fond en bouche. Sucre 46%, amandes 38%, miel 25%.',
+      'Croquante et dorée, notre nougatine aux amandes et au miel fond en bouche.',
     image: '/images/nougatine.jpg',
-    prices: [{ size: '150g', price: '4,00 €' }],
+    prices: [{ size: '150g', price: '4,50 €' }],
     category: 'gourmandise',
   },
 ];
