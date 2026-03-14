@@ -2,7 +2,7 @@ export const SITE_CONFIG = {
   name: 'Le Rucher de la Gravière',
   tagline: 'Miel artisanal de Condé-en-Brie',
   description:
-    'Apiculteurs passionnés à Condé-en-Brie dans l\'Aisne. Miel d\'acacias, de tournesols, de fleurs, pain d\'épices, nougat et nougatine. Vente sur les marchés et en direct.',
+    'Apiculteurs passionnés à Condé-en-Brie dans l\'Aisne. Miel de tournesols, de fleurs, pain d\'épices, nougat et nougatine. Vente sur les marchés et en direct.',
   url: 'https://rucherdelagraviere.fr',
   phone: '06 51 97 72 22',
   address: '3 place de l\'église',
@@ -27,24 +27,13 @@ export interface Product {
 
 export const PRODUCTS: Product[] = [
   {
-    name: 'Miel d\'acacias',
-    description:
-      'Doux et délicat, notre miel d\'acacias est récolté au printemps. Sa couleur claire et son goût subtil en font un incontournable.',
-    image: '/images/pot-miel.jpg',
-    prices: [
-      { size: '500g', price: '7,50 €' },
-      { size: '250g', price: '4,00 €' },
-    ],
-    category: 'miel',
-  },
-  {
     name: 'Miel de tournesols',
     description:
       'Onctueux et parfumé, ce miel est récolté en été dans les champs de tournesols de l\'Aisne. Idéal pour les tartines.',
     image: '/images/pot-miel.jpg',
     prices: [
-      { size: '500g', price: '6,50 €' },
-      { size: '250g', price: '3,50 €' },
+      { size: '500g', price: '7,00 €' },
+      { size: '250g', price: '4,00 €' },
     ],
     category: 'miel',
   },
@@ -105,7 +94,7 @@ export const GALLERY_IMAGES = [
 export const HISTOIRE = {
   title: 'Notre histoire',
   paragraphs: [
-    'Au cœur de Condé-en-Brie, dans l\'Aisne, Le Rucher de la Gravière perpétue une tradition apicole familiale. Nos abeilles butinent les acacias, tournesols et fleurs sauvages du terroir picard pour produire des miels authentiques.',
+    'Au cœur de Condé-en-Brie, dans l\'Aisne, Le Rucher de la Gravière perpétue une tradition apicole familiale. Nos abeilles butinent les tournesols et fleurs sauvages du terroir picard pour produire des miels authentiques.',
     'De la ruche au pot, tout est fait à la main, avec patience et respect des abeilles. Nous récoltons, extrayons et mettons en pot notre miel nous-mêmes, sans intermédiaire ni transformation industrielle.',
     'Retrouvez-nous sur les marchés locaux ou directement chez nous pour découvrir nos miels et gourmandises au miel : pain d\'épices, nougat et nougatine, tous préparés avec notre propre récolte.',
   ],
