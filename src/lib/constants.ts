@@ -59,7 +59,7 @@ export const PRODUCTS: Product[] = [
   {
     name: 'Pain d\'épices orange',
     description:
-      'Le même pain d\'épices moelleux, sublimé par des écorces d\'orange confites. Un délice à l\'heure du goûter.',
+      'Pain d\'épices moelleux aux écorces d\'orange confites. Farine 26%, miel 26%, lait 26%, écorce d\'orange confite 22%, épices.',
     image: '/images/nougatine.jpg',
     prices: [{ size: '1 pièce', price: '4,50 €' }],
     category: 'gourmandise',
