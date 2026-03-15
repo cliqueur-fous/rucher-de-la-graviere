@@ -2,7 +2,7 @@
 import { NAV_LINKS, SITE_CONFIG } from '@/lib/constants';
 ---
 
-<header id="header" class="fixed top-0 z-50 w-full transition-all duration-300">
+<header id="header" class="fixed z-50 w-full transition-all duration-300" style="top: 0;">
   <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
     <a href="/" class="font-serif text-xl font-bold text-foreground transition-colors hover:text-primary">
       {SITE_CONFIG.name}
@@ -61,6 +61,7 @@ import { NAV_LINKS, SITE_CONFIG } from '@/lib/constants';
 
 <script>
   const header = document.getElementById('header')!;
+  const banner = document.getElementById('market-banner');
   const toggle = document.getElementById('mobile-toggle')!;
   const menu = document.getElementById('mobile-menu')!;
   const bar1 = document.getElementById('bar1')!;
@@ -68,9 +69,12 @@ import { NAV_LINKS, SITE_CONFIG } from '@/lib/constants';
   const bar3 = document.getElementById('bar3')!;
   let open = false;
 
-  // Solid background on scroll
+  // Position header below banner + solid background on scroll
   const updateHeader = () => {
-    if (window.scrollY > 50 || open) {
+    const bannerH = banner ? banner.offsetHeight : 0;
+    const scrolled = window.scrollY > bannerH;
+    header.style.top = scrolled ? '0px' : `${bannerH}px`;
+    if (scrolled || open) {
       header.classList.add('bg-background/95', 'backdrop-blur-md', 'shadow-sm');
     } else {
       header.classList.remove('bg-background/95', 'backdrop-blur-md', 'shadow-sm');
@@ -78,6 +82,7 @@ import { NAV_LINKS, SITE_CONFIG } from '@/lib/constants';
   };
 
   window.addEventListener('scroll', updateHeader, { passive: true });
+  window.addEventListener('resize', updateHeader, { passive: true });
   updateHeader();
 
   // Mobile toggle
