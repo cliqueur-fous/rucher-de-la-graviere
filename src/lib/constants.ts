@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
     'Apiculteurs passionnés à Condé-en-Brie dans l\'Aisne. Miel de tournesols, de fleurs, pain d\'épices, nougat et nougatine. Vente sur les marchés et en direct.',
   url: 'https://rucherdelagraviere.fr',
   phone: '06 51 97 72 22',
-  address: '3 rue de la Gravière',
+  address: '3 place de l\'Église',
   city: '02330 Condé-en-Brie',
   region: 'Aisne, Hauts-de-France',
 } as const;
