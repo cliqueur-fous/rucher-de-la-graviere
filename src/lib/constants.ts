@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
     'Apiculteurs passionnés à Condé-en-Brie dans l\'Aisne. Miel de tournesols, de fleurs, pain d\'épices, nougat et nougatine. Vente sur les marchés et en direct.',
   url: 'https://rucherdelagraviere.fr',
   phone: '06 51 97 72 22',
-  address: '3 place de l\'église',
+  address: '3 rue de la Gravière',
   city: '02330 Condé-en-Brie',
   region: 'Aisne, Hauts-de-France',
 } as const;
@@ -30,7 +30,7 @@ export const PRODUCTS: Product[] = [
   {
     name: 'Miel de tournesols',
     description:
-      'Onctueux et parfume, ce miel est recolte en ete dans les champs de tournesols de l\'Aisne. Ideal pour les tartines.',
+      'Onctueux et parfumé, ce miel est récolté en été dans les champs de tournesols de l\'Aisne. Idéal pour les tartines.',
     image: '/images/pot-miel.jpg',
     prices: [
       { size: '500g', price: '7,00 €' },
@@ -41,7 +41,7 @@ export const PRODUCTS: Product[] = [
   {
     name: 'Miel de fleurs',
     description:
-      'Un miel toutes fleurs qui capture la diversite du terroir picard. Chaque recolte est unique, au gre des floraisons.',
+      'Un miel toutes fleurs qui capture la diversité du terroir picard. Chaque récolte est unique, au gré des floraisons.',
     image: '/images/pot-miel.jpg',
     prices: [
       { size: '500g', price: '7,00 €' },
@@ -111,6 +111,23 @@ export const MARKETS: Market[] = [
   {
     name: 'Marché de Condé-en-Brie',
     schedule: '2e dimanche du mois, d\'avril à octobre',
-    location: 'Place de l\'église, Condé-en-Brie',
+    location: 'Condé-en-Brie',
   },
 ];
+
+export function getNextMarketDate(): Date | null {
+  const now = new Date();
+  // Marchés = 2e dimanche, avril (3) à octobre (9)
+  for (let monthOffset = 0; monthOffset <= 12; monthOffset++) {
+    const d = new Date(now.getFullYear(), now.getMonth() + monthOffset, 1);
+    const month = d.getMonth();
+    if (month < 3 || month > 9) continue; // avril=3, octobre=9
+    // 2e dimanche : premier dimanche + 7
+    const firstDay = d.getDay(); // 0=dim
+    const firstSunday = firstDay === 0 ? 1 : 8 - firstDay;
+    const secondSunday = firstSunday + 7;
+    const marketDate = new Date(d.getFullYear(), month, secondSunday);
+    if (marketDate >= now) return marketDate;
+  }
+  return null;
+}
