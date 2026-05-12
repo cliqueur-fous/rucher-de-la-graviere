@@ -84,9 +84,10 @@ export const PRODUCTS: Product[] = [
 ];
 
 export const GALLERY_IMAGES = [
-  { src: '/images/hero-rucher.jpg', alt: 'Apiculteurs au travail au rucher' },
-  { src: '/images/abeilles-cadre.jpg', alt: 'Abeilles sur un cadre de ruche' },
-  { src: '/images/hero-abeilles.jpg', alt: 'Gros plan sur les abeilles' },
+  { src: '/images/ruches-alignement.jpg', alt: 'Nos ruches alignées au rucher de la Gravière' },
+  { src: '/images/apiculteurs-marche.jpg', alt: 'Apiculteurs en route vers les ruches dans le verger' },
+  { src: '/images/abeilles-entree-ruche.jpg', alt: 'Abeilles à l\'entrée d\'une ruche' },
+  { src: '/images/apiculteurs-verger.jpg', alt: 'Apiculteurs du Rucher de la Gravière' },
   { src: '/images/marche.jpg', alt: 'Notre stand au marché de Condé-en-Brie' },
   { src: '/images/pot-miel.jpg', alt: 'Pot de miel de fleurs' },
   { src: '/images/nougatine.jpg', alt: 'Nougatine artisanale au miel' },
